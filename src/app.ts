@@ -1,4 +1,4 @@
-import express, { Application, NextFunction, Request, Response } from 'express'
+import express, { Application } from 'express'
 const app: Application = express()
 import cors from 'cors'
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 //testing
-app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+app.get('/', async () => {
   console.log('working')
   Promise.reject(new Error('Unhandled Promise Rejection'))
 })
