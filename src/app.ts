@@ -1,8 +1,7 @@
-import express, { Application } from 'express'
+import express, { Application, Response, Request } from 'express'
 const app: Application = express()
 import cors from 'cors'
-
-const port = 3000
+import UserRoutes from './modules/user/user.route'
 
 app.use(cors())
 
@@ -10,16 +9,11 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => {
-  res.send('hello world')
-})
-
+//application route
+app.use('/api/v1/users', UserRoutes)
 //testing
-app.get('/', async () => {
-  console.log('working')
-  Promise.reject(new Error('Unhandled Promise Rejection'))
+app.get('/', async (req: Request, res: Response) => {
+  res.send('working')
 })
-
-app.listen(port)
 
 export default app

@@ -14,6 +14,11 @@
 
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
+
+    // "@typescript-eslint/prefer-const": "error",
+    // "@typescript-eslint/no-unused-expressions": "error",
+    // "@typescript-eslint/no-undef": "error",
+    // "@typescript-eslint/no-console": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"]
   },
 
