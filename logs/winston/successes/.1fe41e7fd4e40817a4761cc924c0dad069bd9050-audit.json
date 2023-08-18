@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Previous Files\\WD-JM\\LEVEL 2\\Assignment 3 - Cowhut\\Assignment 3\\logs\\winston\\successes\\.1fe41e7fd4e40817a4761cc924c0dad069bd9050-audit.json",
+    "files": [
+        {
+            "date": 1692355353064,
+            "name": "D:\\Previous Files\\WD-JM\\LEVEL 2\\Assignment 3 - Cowhut\\Assignment 3\\logs\\winston\\successes\\ch-2023-18-08-16-success.log",
+            "hash": "8ae6f3c4e2eaa62b69017ff1f474c6eb818dcb09e74e184ae09e79313fe3a91b"
+        }
+    ],
+    "hashType": "sha256"
+}
