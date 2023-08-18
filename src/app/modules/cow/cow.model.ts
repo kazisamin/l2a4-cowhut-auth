@@ -20,12 +20,12 @@ const CowSchema = new Schema<
     },
     location: {
       type:String,
-enum: ['Dhaka' , 'Chattogram' , 'Barishal' , 'Rajshahi' , 'Sylhet' , 'Comilla' , 'Rangpur' , 'Mymensingh'],
+      enum: ['Dhaka' , 'Chattogram' , 'Barishal' , 'Rajshahi' , 'Sylhet' , 'Comilla' , 'Rangpur' , 'Mymensingh'],
       required: true,
     },
     breed: {
       type:String,
-enum: ['Brahman' , 'Nellore' , 'Sahiwal' , 'Gir' , 'Indigenous' , 'Tharparkar' , 'Kankrej'],
+      enum: ['Brahman' , 'Nellore' , 'Sahiwal' , 'Gir' , 'Indigenous' , 'Tharparkar' , 'Kankrej'],
       required: true,
     },
     weight: {
@@ -34,18 +34,17 @@ enum: ['Brahman' , 'Nellore' , 'Sahiwal' , 'Gir' , 'Indigenous' , 'Tharparkar' ,
     },
     label: {
       type:String,
-enum: ['for sale', 'sold out'],
+      enum: ['for sale', 'sold out'],
       required: true,
     },
     category: {
       type:String,
-enum: ['Dairy', 'Beef', 'DualPurpose'],
+      enum: ['Dairy', 'Beef', 'DualPurpose'],
       required: true,
     },
     seller: {
       type: Schema.Types.ObjectId,
-      ref: 'Seller',
-      required: true,
+      ref: 'UserSignup',
     },
   },
   {
