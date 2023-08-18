@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Cowhut", "errorlogger"]
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  }
 }
