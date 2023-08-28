@@ -1,4 +1,6 @@
 import express from 'express';
+import { AdminRoutes } from '../modules/admin/admin.route';
+import { AuthRoutes } from '../modules/auth/auth.route';
 import { CowRoutes } from '../modules/cow/cow.routes';
 import { UserSignupRoutes } from '../modules/userSignup/userSignup.routes';
 
@@ -14,9 +16,17 @@ const moduleRoutes = [
     path: '/users',
     route: UserSignupRoutes,
   },
+  // {
+  //   path: '/users',
+  //   route: UserSignupRoutes,
+  // },
+  {
+    path: '/admins',
+    route: AdminRoutes,
+  },
   {
     path: '/auth',
-    route: UserSignupRoutes,
+    route: AuthRoutes,
   },
   
   

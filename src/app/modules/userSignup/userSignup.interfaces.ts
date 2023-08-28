@@ -9,6 +9,8 @@ export type UserNameSignup = {
 
 export type IUserSignup = {
   password: string;
+  needsPasswordChange: boolean;
+  passwordChangedAt?: Date;
   role: 'seller' | 'buyer';
   phoneNumber: number;
   name:UserNameSignup;
@@ -17,10 +19,20 @@ export type IUserSignup = {
   income:number;
 };
 
-export type UserSignupModel = Model<
-IUserSignup,
-  Record<string, unknown>
->;
+// export type UserSignupModel = Model<
+// IUserSignup,
+//   Record<string, unknown>
+// >;
+
+export type UserSignupModel = {
+  isUserExist(
+    phoneNumber: number
+  ): Promise<Pick<IUserSignup,  'phoneNumber' | 'password' | 'role' | 'needsPasswordChange'>>;
+  isPasswordMatched(
+    givenPassword: string,
+    savedPassword: string
+  ): Promise<boolean>;
+} & Model<IUserSignup>;
 
 export type IUserSignupFilters = {
   searchTerm?: string;
